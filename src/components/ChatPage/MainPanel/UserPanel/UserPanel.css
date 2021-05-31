@@ -1,0 +1,10 @@
+.userPanelContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: calc(100%);
+}
+
+.userPanelContainer hr {
+    margin: 10px 0;
+}

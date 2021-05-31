@@ -1,0 +1,10 @@
+.friendContainer{
+    color: rgb(103, 103, 103);
+    overflow-y: scroll;
+}
+.friendContainer > h3{
+    margin: 0;
+}
+.friendContainer > .profileContainer{
+    margin: 5px 0;
+}

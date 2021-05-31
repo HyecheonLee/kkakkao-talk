@@ -1,0 +1,9 @@
+.mainContainer {
+    background: rgb(38, 38, 38);
+    height: 100vh;
+}
+
+.mainContainer > div {
+    padding: 20px;
+    height: calc(100% - 40px);
+}

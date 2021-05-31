@@ -1,0 +1,40 @@
+.MyProfileContainer {
+    color: rgb(103, 103, 103);
+}
+
+
+.MyProfileContainer .profile {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.MyProfileContainer .profile .arrowIcon {
+    align-self: center;
+    width: 48px;
+    height: 48px;
+}
+
+.MyProfileContainer .profile .arrowIcon svg {
+    width: 48px;
+    height: 48px;
+    fill: white;
+}
+
+.MyProfileContainer .profile .arrowIcon .dropdown {
+
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 60px;
+    width: 200px;
+    padding: 20px;
+    top: 30px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.MyProfileContainer .profile .arrowIcon .dropdown li {
+    list-style: none;
+
+}

@@ -6,12 +6,11 @@ import RegisterPage from "./components/RegisterPage/RegisterPage";
 import {useEffect} from "react";
 import firebase from "./firebase";
 import {useDispatch, useSelector} from "react-redux";
-import {setUser} from "./redux/actions/user_action";
+import {clearUser, setUser} from "./redux/actions/user_action";
 
 function App() {
   const history = useHistory();
   let dispatch = useDispatch();
-  let user = useSelector(state => state.user);
   useEffect(() => {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
@@ -19,14 +18,11 @@ function App() {
         dispatch(setUser(user))
       } else {
         history.push("/login")
+        dispatch(clearUser())
       }
     });
-  }, [])
-  if (user.isLoading) {
-    return (
-      <div>로딩중입니다.</div>
-    )
-  }
+  }, [history, dispatch])
+
   return (
     <Switch>
       <Route exact path="/" component={ChatPage}/>

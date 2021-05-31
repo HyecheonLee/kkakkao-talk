@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import firebase from "firebase";
@@ -9,7 +9,6 @@ const LoginPage = () => {
   } = useForm({mode: "onChange"});
   const [errorFromSubmit, setErrorFromSubmit] = useState('');
   const [loading, setLoading] = useState(false);
-
   const onSubmit = async (data) => {
     try {
       setLoading(true);
@@ -24,6 +23,11 @@ const LoginPage = () => {
       }, 5000)
     }
   };
+  useEffect(() => {
+    return () => {
+      setLoading(false)
+    }
+  });
   return (
     <div>
       <div style={{textAlign: 'center'}}>

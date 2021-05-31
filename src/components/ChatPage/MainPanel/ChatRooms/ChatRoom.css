@@ -1,0 +1,10 @@
+.chatRoomContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: calc(100%);
+}
+
+.chatRoomContainer hr {
+    margin: 10px 0;
+}

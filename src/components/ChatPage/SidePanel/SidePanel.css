@@ -1,0 +1,38 @@
+.sidePanelContainer {
+    background: #646464;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userIconContainer {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.userIconContainer svg {
+    fill: rgb(160, 160, 160);
+    width: 60px;
+    height: 60px;
+}
+
+.userIconContainer.active svg {
+    fill: rgb(277, 277, 277);
+}
+
+
+.messageIconContainer {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.messageIconContainer svg {
+    fill: rgb(160, 160, 160);
+    width: 60px;
+    height: 60px;
+}
+
+.messageIconContainer.active svg {
+    fill: rgb(277, 277, 277);
+}

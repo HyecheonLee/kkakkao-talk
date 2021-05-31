@@ -1,0 +1,25 @@
+/*.profileContainer {*/
+/*    margin: 20px 0;*/
+/*    color: rgb(103, 103, 103);*/
+/*}*/
+
+.profileContainer {
+    display: flex;
+}
+
+.profileContainer .photo img {
+    border-radius: 20px;
+    height: 60px;
+}
+
+.profileContainer .info {
+    margin: 0 10px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profileContainer .info > div {
+    margin: 2px 0;
+}
