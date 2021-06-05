@@ -1,4 +1,4 @@
-import {CLEAR_USER, SET_USER} from "../actions/types";
+import {CLEAR_USER, IS_LOADING, SET_USER, UPDATE_PHOTO_URL} from "../actions/types";
 
 const initialUserState = {
   currentUser: null,
@@ -11,6 +11,20 @@ const userReducer = (state = initialUserState, action) => {
         ...state,
         currentUser: action.payload,
         isLoading: false
+      }
+    case UPDATE_PHOTO_URL:
+      return {
+        ...state,
+        currentUser: {
+          ...state.currentUser,
+          photoURL: action.payload
+        },
+        isLoading: false
+      }
+    case IS_LOADING:
+      return {
+        ...state,
+        isLoading: true
       }
     case CLEAR_USER:
       return {

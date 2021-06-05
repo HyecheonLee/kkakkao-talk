@@ -1,8 +1,3 @@
-/*.profileContainer {*/
-/*    margin: 20px 0;*/
-/*    color: rgb(103, 103, 103);*/
-/*}*/
-
 .profileContainer {
     display: flex;
 }
@@ -10,6 +5,8 @@
 .profileContainer .photo img {
     border-radius: 20px;
     height: 60px;
+    width: 60px;
+    object-fit: cover;
 }
 
 .profileContainer .info {
